@@ -1,0 +1,2 @@
+class CryptWatchApiException(Exception):
+    pass
