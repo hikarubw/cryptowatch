@@ -89,7 +89,7 @@ class CryptoWatchMarket(CryptoWatchApi):
         self._route = self._get_routes()
 
     def _get_routes(self):
-        market_info = CryptoWatchMarket().get_market_info_detail(self._exchange_name, self._pair)
+        market_info = CryptoWatchExchange().get_market_info_detail(self._exchange_name, self._pair)
         if market_info is None:
             return defaultdict(str)
         return market_info['routes']
