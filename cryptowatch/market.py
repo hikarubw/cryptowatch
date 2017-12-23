@@ -74,6 +74,12 @@ class CryptoWatchMarket(CryptoWatchApi):
             return None
         return self._get(info['route'])
 
+    def exchanges(self):
+        return self._market_info.keys()
+
+    def pairs(self, exchange):
+        return [market['pair'] for market in self._market_info[exchange]]
+
 
 class CryptoWatchExchange(CryptoWatchApi):
     def __init__(self, exchange_name, pair):
