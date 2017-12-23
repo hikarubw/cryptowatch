@@ -44,7 +44,7 @@ class CryptoWatchApi(metaclass=ABCMeta):
         return self._latest_remaining
 
 
-class CryptoWatchExcange(CryptoWatchApi):
+class CryptoWatchExchange(CryptoWatchApi):
     def __init__(self, only_active=True):
         super().__init__()
         self._only_active = only_active
